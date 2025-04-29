@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - EqualEd</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #8b5cf6;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text-dark: #0f172a;
+            --text-light: #f8fafc;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            margin-right: 0.5rem;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-300);
+        }
+
+        .resource-content {
+            padding: 1.5rem;
+        }
+
+        .resource-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .resource-description {
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+        }
+
+        .resource-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .resource-tag {
+            background-color: var(--gray-100);
+            color: var(--gray-300);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .tools-section {
+            background-color: var(--gray-100);
+            padding: 4rem 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .tool-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.5rem;
+        }
+
+        .tool-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .tool-description {
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--gray-100);
+        }
+
+        .guides-section {
+            padding: 4rem 0;
+        }
+
+        .guides-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        .guide-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .guide-description {
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray-300);
+        }
+
+        .accessibility-controls {
+            position: static;
+            background-color: var(--light);
+            padding: 0.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .control-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            white-space: nowrap;
+        }
+
+        .control-item input[type="checkbox"] {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="accessibility-controls">
+        <div class="control-group">
+            <div class="control-item">
+                <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
+                <label for="high-contrast">High Contrast</label>
+            </div>
+            <div class="control-item">
+                <input type="checkbox" id="large-text" aria-label="Toggle large text mode">
+                <label for="large-text">Large Text</label>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <div class="logo-icon">E</div>
+                    EqualEd
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="courses.html">Courses</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Learning Resources</h1>
+            <p>Discover tools, guides, and support materials designed to help every learner succeed.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">Image</div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Reading Comprehension Guide</h3>
+                        <p class="resource-description">A comprehensive guide to improving reading comprehension skills with adaptive strategies.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Reading</span>
+                            <span class="resource-tag">Comprehension</span>
+                            <span class="resource-tag">Guide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-image">Image</div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Math Problem Solver</h3>
+                        <p class="resource-description">Interactive tool that breaks down math problems into manageable steps with visual aids.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Mathematics</span>
+                            <span class="resource-tag">Interactive</span>
+                            <span class="resource-tag">Tool</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-image">Image</div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Study Skills Workshop</h3>
+                        <p class="resource-description">Video series teaching effective study techniques for different learning styles.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Study Skills</span>
+                            <span class="resource-tag">Video</span>
+                            <span class="resource-tag">Workshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="section-title">Learning Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3 class="tool-title">Focus Timer</h3>
+                    <p class="tool-description">Customizable timer to help maintain focus and manage study sessions.</p>
+                    <a href="#" class="btn btn-primary">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3 class="tool-title">Note Taking Assistant</h3>
+                    <p class="tool-description">AI-powered tool that helps organize and structure your notes.</p>
+                    <a href="#" class="btn btn-primary">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <h3 class="tool-title">Visual Learning Creator</h3>
+                    <p class="tool-description">Create visual aids and mind maps to enhance understanding.</p>
+                    <a href="#" class="btn btn-primary">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔊</div>
+                    <h3 class="tool-title">Text to Speech</h3>
+                    <p class="tool-description">Convert text to speech with customizable voice and speed options.</p>
+                    <a href="#" class="btn btn-primary">Try Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guides-section">
+        <div class="container">
+            <h2 class="section-title">Learning Guides</h2>
+            <div class="guides-list">
+                <div class="guide-item">
+                    <h3 class="guide-title">Understanding Your Learning Style</h3>
+                    <p class="guide-description">Learn about different learning styles and how to identify your own.</p>
+                    <a href="#" class="btn btn-outline">Read Guide</a>
+                </div>
+                <div class="guide-item">
+                    <h3 class="guide-title">Effective Study Strategies</h3>
+                    <p class="guide-description">Discover proven study techniques that work for different learning needs.</p>
+                    <a href="#" class="btn btn-outline">Read Guide</a>
+                </div>
+                <div class="guide-item">
+                    <h3 class="guide-title">Managing Learning Challenges</h3>
+                    <p class="guide-description">Practical tips for overcoming common learning obstacles.</p>
+                    <a href="#" class="btn btn-outline">Read Guide</a>
+                </div>
+                <div class="guide-item">
+                    <h3 class="guide-title">Building Confidence in Learning</h3>
+                    <p class="guide-description">Strategies to build self-confidence and motivation in your learning journey.</p>
+                    <a href="#" class="btn btn-outline">Read Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EqualEd</h3>
+                    <p>Empowering every learner with personalized, accessible education through AI technology.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="accessibility.html">Accessibility Statement</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EqualEd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="accessibility.js"></script>
+</body>
+</html> 
