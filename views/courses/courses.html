@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EqualEd</title>
+    <link rel="stylesheet" href="/EqualEd/views/courses/courses.css">
+   
+</head>
+<body>
+    <div class="accessibility-controls">
+        <div class="control-group">
+            <div class="control-item">
+                <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
+                <label for="high-contrast">High Contrast</label>
+            </div>
+            <div class="control-item">
+                <input type="checkbox" id="large-text" aria-label="Toggle large text mode">
+                <label for="large-text">Large Text</label>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/EqualEd/views/index/index.html" class="logo">
+                    <div class="logo-icon">E</div>
+                    EqualEd
+                </a>
+                <div class="nav-links">
+                    <a href="/EqualEd/views/index/index.html">Home</a>
+                    <a href="/EqualEd/views/courses/courses.html">Courses</a>
+                    <a href="/EqualEd/views/resources/resources.html">Resources</a>
+                    <a href="/EqualEd/views/about/about.html">About Us</a>
+                    <a href="/EqualEd/views/contact/contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Our Courses</h1>
+            <p>Discover our adaptive learning courses designed to meet your unique needs and learning style.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="">All Subjects</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="language">Language Arts</option>
+                            <option value="social">Social Studies</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="grade">Grade Level</label>
+                        <select id="grade">
+                            <option value="">All Grades</option>
+                            <option value="elementary">Elementary (K-5)</option>
+                            <option value="middle">Middle School (6-8)</option>
+                            <option value="high">High School (9-12)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="format">Learning Format</label>
+                        <select id="format">
+                            <option value="">All Formats</option>
+                            <option value="visual">Visual</option>
+                            <option value="audio">Audio</option>
+                            <option value="interactive">Interactive</option>
+                            <option value="text">Text-based</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search courses..." aria-label="Search courses">
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">Image</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Adaptive Mathematics</h3>
+                        <div class="course-info">
+                            <span>Grades 6-8</span>
+                            <span>Multi-modal</span>
+                        </div>
+                        <p class="course-description">Experience mathematics through interactive, visual, and auditory learning modules that adapt to your preferred learning style.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Mathematics</span>
+                            <span class="course-tag">Interactive</span>
+                            <span class="course-tag">Adaptive</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">Image</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Accessible Science Lab</h3>
+                        <div class="course-info">
+                            <span>Grades 9-12</span>
+                            <span>Virtual Lab</span>
+                        </div>
+                        <p class="course-description">Explore scientific concepts through simulations and experiments designed to be accessible for all types of learners.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Science</span>
+                            <span class="course-tag">Virtual Lab</span>
+                            <span class="course-tag">Interactive</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">Image</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Interactive Literature</h3>
+                        <div class="course-info">
+                            <span>All Grades</span>
+                            <span>Multi-format</span>
+                        </div>
+                        <p class="course-description">Engage with classic and contemporary literature through text, audio, visual summaries, and interactive discussions.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Language Arts</span>
+                            <span class="course-tag">Multi-format</span>
+                            <span class="course-tag">Interactive</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">Image</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Inclusive Coding</h3>
+                        <div class="course-info">
+                            <span>Grades 5-12</span>
+                            <span>Project-based</span>
+                        </div>
+                        <p class="course-description">Learn programming through accessible exercises with multiple input methods and adaptive challenges.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Computer Science</span>
+                            <span class="course-tag">Project-based</span>
+                            <span class="course-tag">Adaptive</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EqualEd</h3>
+                    <p>Empowering every learner with personalized, accessible education through AI technology.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/EqualEd/views/about/about.html">About Us</a></li>
+                        <li><a href="/EqualEd/views/courses/courses.html">Courses</a></li>
+                        <li><a href="/EqualEd/views/resources/resources.html">Resources</a></li>
+                        <li><a href="/EqualEd/views/blog/blog.html">Blog</a></li>
+                        <li><a href="/EqualEd/views/contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/EqualEd/views/help/help.html">Help Center</a></li>
+                        <li><a href="/EqualEd/views/accessibility/accessibility.html">Accessibility Statement</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EqualEd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/EqualEd/views/accessibility/accessibility.js"></script>
+</body>
+</html> 

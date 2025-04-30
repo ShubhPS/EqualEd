@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EqualEd</title>
+    <link rel="stylesheet" href="/EqualEd/views/contact/contact.css">
+    
+</head>
+<body>
+    <div class="accessibility-controls">
+        <div class="control-group">
+            <div class="control-item">
+                <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
+                <label for="high-contrast">High Contrast</label>
+            </div>
+            <div class="control-item">
+                <input type="checkbox" id="large-text" aria-label="Toggle large text mode">
+                <label for="large-text">Large Text</label>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <div class="logo-icon">E</div>
+                    EqualEd
+                </a>
+                <div class="nav-links">
+                    <a href="/EqualEd/views/index/index.html">Home</a>
+                    <a href="/EqualEd/views/courses/courses.html">Courses</a>
+                    <a href="/EqualEd/views/resources/resources.html">Resources</a>
+                    <a href="/EqualEd/views/about/about.html">About Us</a>
+                    <a href="/EqualEd/views/contact/contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Reach out to us with any questions, feedback, or support needs.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <form action="/EqualEd/views/contact/contact.html" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2 class="section-title">Other Ways to Reach Us</h2>
+                    <div class="contact-method">
+                        <h3>Email</h3>
+                        <p><a href="mailto:support@equaled.org">support@equaled.org</a></p>
+                        <p>We typically respond within 24 hours</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+1-800-555-0123">1-800-555-0123</a></p>
+                        <p>Monday-Friday, 9am-5pm EST</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>Address</h3>
+                        <p>EqualEd Headquarters</p>
+                        <p>123 Education Street</p>
+                        <p>Boston, MA 02108</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>Social Media</h3>
+                        <p><a href="https://twitter.com/equaled">Twitter</a></p>
+                        <p><a href="https://facebook.com/equaled">Facebook</a></p>
+                        <p><a href="https://linkedin.com/company/equaled">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I get started with EqualEd?</h3>
+                    <p class="faq-answer">You can create an account by clicking the "Get Started" button on our homepage. We'll guide you through the process of setting up your profile and selecting courses.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What accessibility features do you offer?</h3>
+                    <p class="faq-answer">We offer a range of accessibility features including screen reader compatibility, high contrast mode, text-to-speech, and customizable font sizes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I request technical support?</h3>
+                    <p class="faq-answer">You can reach our technical support team through the contact form above, or by emailing support@equaled.org. We aim to respond to all support requests within 24 hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I try EqualEd before committing?</h3>
+                    <p class="faq-answer">Yes! We offer a 14-day free trial that gives you full access to our platform and courses. No credit card required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EqualEd</h3>
+                    <p>Empowering every learner with personalized, accessible education through AI technology.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/EqualEd/views/about/about.html">About Us</a></li>
+                        <li><a href="/EqualEd/views/courses/courses.html">Courses</a></li>
+                        <li><a href="/EqualEd/views/resources/resources.html">Resources</a></li>
+                        <li><a href="/EqualEd/views/blog/blog.html">Blog</a></li>
+                        <li><a href="/EqualEd/views/contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/EqualEd/views/help/help.html">Help Center</a></li>
+                        <li><a href="/EqualEd/views/accessibility/accessibility.html">Accessibility Statement</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EqualEd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/EqualEd/views/accessibility/accessibility.js"></script>
+</body>
+</html> 
