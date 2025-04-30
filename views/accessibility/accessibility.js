@@ -1,6 +1,7 @@
 // Get the checkboxes and font selector
 const highContrastCheckbox = document.getElementById('high-contrast');
 const largeTextCheckbox = document.getElementById('large-text');
+const darkModeCheckbox = document.getElementById('dark-mode');
 const fontSelect = document.getElementById('font-select');
 
 // Add OpenDyslexic font
@@ -15,6 +16,7 @@ openDyslexicFont.load().then(function(loadedFace) {
 function loadAccessibilityPreferences() {
     const highContrast = localStorage.getItem('highContrast') === 'true';
     const largeText = localStorage.getItem('largeText') === 'true';
+    const darkMode = localStorage.getItem('darkMode') === 'true';
     const selectedFont = localStorage.getItem('selectedFont');
 
     // Apply saved preferences
@@ -26,6 +28,11 @@ function loadAccessibilityPreferences() {
     if (largeText) {
         document.body.classList.add('large-text');
         largeTextCheckbox.checked = true;
+    }
+
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+        darkModeCheckbox.checked = true;
     }
 
     if (selectedFont) {
@@ -40,6 +47,7 @@ function loadAccessibilityPreferences() {
 function saveAccessibilityPreferences() {
     localStorage.setItem('highContrast', highContrastCheckbox.checked);
     localStorage.setItem('largeText', largeTextCheckbox.checked);
+    localStorage.setItem('darkMode', darkModeCheckbox.checked);
     if (fontSelect) {
         localStorage.setItem('selectedFont', fontSelect.value);
     }
@@ -56,6 +64,11 @@ largeTextCheckbox.addEventListener('change', () => {
     saveAccessibilityPreferences();
 });
 
+darkModeCheckbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+    saveAccessibilityPreferences();
+});
+
 if (fontSelect) {
     fontSelect.addEventListener('change', () => {
         document.body.style.fontFamily = fontSelect.value;
@@ -64,4 +77,4 @@ if (fontSelect) {
 }
 
 // Load preferences when the page loads
-document.addEventListener('DOMContentLoaded', loadAccessibilityPreferences); 
+document.addEventListener('DOMContentLoaded', loadAccessibilityPreferences);
