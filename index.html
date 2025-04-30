@@ -373,6 +373,14 @@ header {
   margin-bottom: 0.5rem;
 }
 
+/* Override gradient text in dark mode + high contrast */
+.dark-mode.high-contrast .stat-number {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+}
+
 .stat-label {
   font-weight: 500;
   font-size: 1.1rem;
