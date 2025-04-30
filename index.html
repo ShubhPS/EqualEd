@@ -62,6 +62,19 @@
             font-size: 1.2rem;
             padding: 1rem 2rem;
         }
+        .social-links li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.social-links i {
+  font-size: 1.5rem;
+  color: var(--gray-300);
+  transition: color 0.2s;
+}
+.social-links i:hover {
+  color: var(--accent);
+}
+
 
         /* Base styles */
         body {
@@ -215,6 +228,27 @@
             background-image: linear-gradient(45deg, var(--accent), var(--primary));
         }
 
+        .stats-bar {
+  background: var(--gray-100);
+  padding: 2rem 0;
+}
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+.stat-label {
+  display: block;
+  color: var(--dark);
+  margin-top: 0.5rem;
+}
+
+        
         /* Accessibility controls */
         .accessibility-controls {
             background-color: var(--gray-200);
@@ -222,6 +256,15 @@
             border-radius: 4px;
             margin: 1rem 0;
         }
+        .dark-mode {
+  --light: #18181b;
+  --text-dark: #f8fafc;
+  --dark: #0f172a;
+  --gray-100: #23272f;
+  --gray-200: #18181b;
+  --gray-300: #334155;
+}
+
 
         .control-group {
             display: flex;
@@ -386,6 +429,24 @@
             font-size: 1.15rem;
             margin-bottom: 0.5rem;
         }
+        /* Newsletter */
+        .newsletter-signup {
+  background: var(--accent);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.newsletter-signup input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  margin-right: 1rem;
+  width: 250px;
+  max-width: 80vw;
+}
+
 
         /* Footer */
         footer {
@@ -496,6 +557,10 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -540,11 +605,35 @@
                 </div>
             </div>
         </section>
+        <section class="stats-bar">
+            <div class="container">
+              <div class="stats-grid">
+                <div class="stat">
+                  <span class="stat-number">10,000+</span>
+                  <span class="stat-label">Learners Empowered</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">95%</span>
+                  <span class="stat-label">User Satisfaction</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">150+</span>
+                  <span class="stat-label">Schools Supported</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          
         
         <div class="container">
             <div class="accessibility-controls" aria-labelledby="a11y-controls">
                 <h2 id="a11y-controls" class="sr-only">Accessibility Controls</h2>
                 <div class="control-group">
+                    <div class="control-item">
+                        <input type="checkbox" id="dark-mode" aria-label="Toggle dark mode">
+                        <label for="dark-mode">Dark Mode</label>
+                      </div>
+                      
                     <div class="control-item">
                         <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
                         <label for="high-contrast">High Contrast</label>
@@ -577,7 +666,8 @@
                 
                 <div class="features">
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">1</div>
+                        <div class="feature-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+
                         <h3 class="feature-title">AI Assessment</h3>
                         <p>Our AI technology evaluates your learning style, preferences, and needs through interactive assessments.</p>
                     </div>
@@ -729,7 +819,16 @@
             </div>
         </section>
     </main>
-    
+    <section class="newsletter-signup">
+        <div class="container">
+          <h2>Stay Informed</h2>
+          <form>
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -762,13 +861,14 @@
                 
                 <div class="footer-column">
                     <h3>Connect With Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://twitter.com/equaled" aria-label="Twitter">Twitter</a></li>
-                        <li><a href="https://facebook.com/equaled" aria-label="Facebook">Facebook</a></li>
-                        <li><a href="https://instagram.com/equaled" aria-label="Instagram">Instagram</a></li>
-                        <li><a href="https://linkedin.com/company/equaled" aria-label="LinkedIn">LinkedIn</a></li>
-                        <li><a href="https://youtube.com/equaled" aria-label="YouTube">YouTube</a></li>
-                    </ul>
+                    <ul class="footer-links social-links">
+                        <li><a href="https://twitter.com/equaled" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://facebook.com/equaled" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://instagram.com/equaled" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://linkedin.com/company/equaled" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://youtube.com/equaled" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                      </ul>
+                      
                 </div>
             </div>
             
@@ -833,6 +933,11 @@
         fontSelect.addEventListener('change', () => {
             document.body.style.fontFamily = fontSelect.value;
         });
+        const darkModeCheckbox = document.getElementById('dark-mode');
+darkModeCheckbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
 
         // Responsive design adjustments
         function handleResize() {
