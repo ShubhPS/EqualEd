@@ -226,6 +226,13 @@ nav {
     justify-content: center;
     color: var(--gray-300);
 }
+.course-image-component{
+    height: 25rem;
+    width: 25rem;
+    margin-top: 7.5rem;
+    object-fit: fill;
+ 
+}
 
 .course-content {
     padding: 1.5rem;
