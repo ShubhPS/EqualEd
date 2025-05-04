@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EqualEd</title>
+    <link rel="stylesheet" href="/EqualEd/views/admin/admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/EqualEd/views/index/index.html" class="logo">
+                    <div class="logo-icon">E</div>
+                    EqualEd
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-header">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+        </div>
+    </section>
+
+    <section class="admin-content">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalUsers">0</h3>
+                    <p>Total Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="activeUsers">0</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="newUsers">0</h3>
+                    <p>New Users Today</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="students">0</h3>
+                    <p>Students</p>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search users..." id="searchInput">
+            </div>
+
+            <div class="filters">
+                <select class="filter-select" id="roleFilter">
+                    <option value="">All Roles</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="parent">Parent</option>
+                    <option value="other">Other</option>
+                </select>
+                <select class="filter-select" id="statusFilter">
+                    <option value="">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Learning Needs</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <!-- User rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+   <script src="/EqualEd/views/admin/admin.js"></script> 
+</body>
+</html> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EqualEd</title>
+    <link rel="stylesheet" href="/EqualEd/views/login/login.css">
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/EqualEd/views/index/index.html" class="logo">
+                    <div class="logo-icon">E</div>
+                    EqualEd
+                </a>
+                <div class="nav-links">
+                    <a href="/EqualEd/views/index/index.html">Home</a>
+                    <a href="/EqualEd/views/courses/courses.html">Courses</a>
+                    <a href="/EqualEd/views/resources/resources.html">Resources</a>
+                    <a href="/EqualEd/views/about/about.html">About Us</a>
+                    <a href="/EqualEd/views/contact/contact.html">Contact</a>
+                </div>
+                <div class="accessibility-controls">
+                    <div class="control-group">
+                        <div class="control-item">
+                            <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
+                            <label for="high-contrast">High Contrast</label>
+                        </div>
+                        <div class="control-item">
+                            <input type="checkbox" id="large-text" aria-label="Toggle large text mode">
+                            <label for="large-text">Large Text</label>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome Back</h1>
+            <p>Log in to continue your learning journey.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="error-message" id="errorMessage"></div>
+
+                <button type="submit" class="btn btn-primary">Log In</button>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="/EqualEd/views/signup/signup.html">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+ <script src="/EqualEd/views/login/login.js"></script>
+</body>
+</html> 
