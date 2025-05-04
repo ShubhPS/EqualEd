@@ -160,6 +160,11 @@ nav {
     color: var(--gray-300);
     font-size: 1.5rem;
 }
+.team-image{
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+}
 
 /* Accessibility controls */
 .accessibility-controls {
