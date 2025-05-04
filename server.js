@@ -14,7 +14,6 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'views')));
 
 // Database connection
@@ -34,7 +33,7 @@ app.use('/api/courses', courseRoutes);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('public'));
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+        res.sendFile(path.join(__dirname, 'views', 'index', 'index.html'));
     });
 }
 
